@@ -11,3 +11,11 @@ nav {
     color: #fff;
 }
 
+#menu-toogle:checked ~ .box {
+    width: 20px;
+    height: 20px;
+    background-color: #000;
+    display: block;
+}
+
+
