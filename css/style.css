@@ -4,18 +4,59 @@ body {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+
 }
 
 nav {
     background-color: #000;
     color: #fff;
+    font-size: 2em;
+}
+
+nav > ul {
+    display: flex;
+    list-style-type: none;
+    padding: 0px;
+    margin: 0px auto;
+}
+
+.hamburguer {
+    padding-left: 12px;
+}
+
+
+nav .push-right {
+    margin-left: auto;
+    margin-right: 12px;
+}
+
+.box {
+    display: none;
+    width: 200px;
+    height: 94vh;
+    background-color: #000;
+    margin: 0;
+    padding: 0;
+}
+
+.check-box-menu  {
+    display: none;
 }
 
 #menu-toogle:checked ~ .box {
-    width: 20px;
-    height: 20px;
-    background-color: #000;
     display: block;
+    position: absolute; 
 }
 
+.content {
+    margin: 10px;
+}
 
+button {
+    background-color: #1f6ea3;
+    color: #fff;
+    border-radius: 10px;
+    border: 2px solid #1f6ea3;
+    width: auto;
+    height: auto;
+}
