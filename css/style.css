@@ -68,22 +68,25 @@ nav .push-right {
     position: absolute; 
 }
 
-.content {
-    display: flex;
-    flex-direction: column;
-}
-
 #exercises {
     color: #293F4E;
     align-self: center;
 }
 
+.content {
+    display: flex;
+    flex-direction: column;
+}
+
 .exercise1-content {
     display: flex;
+    align-content: center;
+    flex-wrap: wrap;
     margin-top: 15px;
     gap: 12px;
     margin-left: auto;
     margin-right: auto;
+    padding: 0px 20px;
 }
 
 .card {
@@ -114,6 +117,14 @@ button {
     height: auto;
     margin: 10px 0 0 0;
     font-weight: 750;
+}
+
+
+.exe2BoxNumbers {
+    display: inline;
+    width: 30px;
+    border-radius: 10px;
+    border-color: #A3A21F;
 }
 
 /* Chrome, Safari, Edge, Opera */
