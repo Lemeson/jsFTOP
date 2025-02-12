@@ -4,7 +4,7 @@ body {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
 }
 
 .caixa {
@@ -12,21 +12,18 @@ body {
     height: 0px;
 }
 
+.card>input {
+    display: block;
+    margin-top:5px;
+}
 
 #menu-toggle:checked ~ .caixa {
     width: 10px;
     height: 10px;
-    background-color: pink;
 }
-
-#menu-toogle {
-
-}
-
-
 
 nav {
-    background-color: #000;
+    background-color: #1F6EA3;
     color: #fff;
     font-size: 2em;
 }
@@ -50,13 +47,18 @@ nav .push-right {
 
 .box {
     display: none;
-    width: 200px;
-    height: 94vh;
-    background-color: #000;
+    width: auto;
+    height: auto;
+    background-color: #1F6EA3;
     margin: 0;
-    padding: 0;
+    padding: 0px 10px;
 }
 
+.box a {
+    color: #fff;
+    text-decoration:solid;
+    font-size: 0.5em;
+}
 .check-box-menu  {
     display: none;
 }
@@ -67,14 +69,62 @@ nav .push-right {
 }
 
 .content {
-    margin: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+#exercises {
+    color: #293F4E;
+    align-self: center;
+}
+
+.exercise1-content {
+    display: flex;
+    margin-top: 15px;
+    gap: 12px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.card {
+    width: 250px;
+    height: auto;
+    border: 2px solid #A3A21F;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 1.1em;
+    background-color: #A3A21F35;
+}
+
+.card > h2 {
+    text-align: center;
+}
+
+.exercise {
+    color: #293F4E;
+    
 }
 
 button {
-    background-color: #1f6ea3;
+    background-color: #1F6EA3;
     color: #fff;
     border-radius: 10px;
-    border: 2px solid #1f6ea3;
+    border: 2px solid #1F6EA3;
     width: auto;
     height: auto;
+    margin: 10px 0 0 0;
+    font-weight: 750;
 }
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+
+/* Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+  }

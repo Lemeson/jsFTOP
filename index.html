@@ -17,7 +17,7 @@
                 <div id="toogle-menu">
                     <input class="check-box-menu" id="menu-toogle" type="checkbox">
                     <div class="box">
-                        <a href="#exercise1">ds</a>
+                        <a href="#exercise1">Exercise 1</a>
                     </div>
                 </div>
             </li>
@@ -26,19 +26,47 @@
     </nav>
 
     <div class="content">
-        <h2 class="exercise1">Exercise 1</h2>
-        <p>This exercise takes a number from input and add 7 to it.</p>
-        Number: <input type="number" id="numberInput" name="number">
+        <h1 id="exercises">Exercises</h1>
+        <div class="exercise1-content">
+            <div class="card"> 
+                <h2 class="exercise" id="exercise1">Exercise 1</h2>
+                <p>This exercise takes a number from input and add 7 to it.</p>
+                Number: <input type="number" id="numberInput" name="number">
+                
+                <button type="button" onclick="add7()">Sum 7</button>
+        
+                <p id="result">Result will appear here</p>
+            </div>
+    
+            <div class="card">
+                <h2 class="exercise"> Exercise 2</h2>
+                <p>This exercise takes two number and mulitiplies them</p>
+                <br><br><br>
+                <button type="button" onclick="multiply()">Multiply</button>
+                <p id="result2">Result will appear here</p>
+            </div>
 
-        <button type="button" onclick="add7()">Try it</button>
+            <div class="card">
+                <h2 class="exercise"> Exercise 3</h2>
+                <p>This exercise takes a string and capitalize the first letter</p>
+                <br>
+                Enter string:
+                <input type="text" id="capitalize">
+                <button type="button" onclick="capitalize()">Capitalize</button>
+                <p id="result3">Result will appear here</p>
+            </div>
 
-        <p id="result">Result will appear here</p>
+            <div class="card">
+                <h2 class="exercise"> Exercise 4</h2>
+                <p>This exercise takes a string and returns the last letter</p>
+                <br>
+                Enter string:
+                <input type="text" id="lastletter">
+                <button type="button" onclick="lastletter()">Last letter</button>
+                <p id="result4">Result will appear here</p>
+            </div>
+        </div>
 
-
-        <h2> Exercise 2</h2>
-
-        <button type="button" onclick="multiply()">Multiply</button>
-        <p id="result2">Result will appear here</p>
     </div>
 
 </body>
