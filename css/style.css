@@ -80,7 +80,6 @@ nav .push-right {
 
 .exercise1-content {
     display: flex;
-    align-content: center;
     flex-wrap: wrap;
     margin-top: 15px;
     gap: 12px;
@@ -89,7 +88,16 @@ nav .push-right {
     padding: 0px 20px;
 }
 
+.teste {
+    display: flex;
+    gap:12px;
+    margin-left: auto;
+    margin-right: auto;
+    flex: 0 1 1;
+}
+
 .card {
+    flex: auto;
     width: 250px;
     height: auto;
     border: 2px solid #A3A21F;
