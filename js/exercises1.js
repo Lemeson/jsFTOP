@@ -15,7 +15,7 @@ function multiply() {
 
     const result2 = () => number1 * number2;
     const productResult = result2();
-
+    
     console.log(`${number1} * ${number2} =  ${number1 * number2}`);
 
     document.getElementById("result2").innerText = productResult;

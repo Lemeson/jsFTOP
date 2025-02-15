@@ -1,0 +1,22 @@
+body {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+
+
+.exercise {
+    color: #293F4E;
+    
+}
+
+.exe2BoxNumbers {
+    display: inline;
+    width: 30px;
+    border-radius: 10px;
+    border-color: #A3A21F;
+}
+
