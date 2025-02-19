@@ -126,6 +126,19 @@ button {
     font-weight: 750;
 }
 
+.button-reload {
+    display: flex;
+    width: auto; 
+    height: auto;
+    font-size: 1.1em;
+    text-align: center;  
+    margin: 10px auto;
+}
+
+.card-errors {
+    height: 412.38px;
+}
+
 /* Chrome, Safari, Edge, Opera */
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {

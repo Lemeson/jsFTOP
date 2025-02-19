@@ -79,20 +79,20 @@
 
         </div>
         
-        <br><br><br><br><tr>
+        <br><br>
 
         <div>
             <h1 class="header1 center">Errors in JS</h1>
             <div class="dualCard">
                 <div class="sub-content-dual-card">
-                    <div class="card">
+                    <div class="card card-errors">
                         <h2> Error 1</h2>
                         <p>This function will generate a reference error</p>
                         <p id="reference-error1">Try it</p>
                         <button class="at-bottom" onclick="error1()">Error 1</button>
                     </div>
 
-                    <div class="card">
+                    <div class="card card-errors">
                         <h2> Error 2</h2>
                         <p>This function helps you to understand the stack trace.</p>
                         <p>Try it</p>
@@ -101,7 +101,7 @@
                         <button class="at-bottom" onclick="error2()">Error 2</button>
                     </div>
                     
-                    <div class="card">
+                    <div class="card card-errors">
                         <h2> Error 3</h2>
                         <p>
                             This function will generate a SyntaxError and, as a consequence,
@@ -112,9 +112,9 @@
                         
                         <button class="at-bottom" onclick="helloWorld()">Error 3</button>
                     </div>
-                    <button onclick="location.reload()">Relload Erros</button>
                 </div>
             </div>
+            <button class="button-reload" onclick="location.reload()">Relload Errors</button>
         </div>
     </div>
 
