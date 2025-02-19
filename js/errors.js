@@ -22,18 +22,27 @@ function error2(){
     const a = 5;
     const b = 10;
 
-    function add() {
-    return c;
+    try {
+        function add() {
+            return c;
+            }
+        
+            function print() {
+            add();
+            }
+        
+            print();
+    } catch(error){
+        document.getElementById("stack-error2").innerText = error;
+        document.getElementById("stack-error2").style.color = "#A3201F";
+        document.getElementById("stack-console-error2").innerText = "Para acessar \
+        o stack abra o console do navegador e gere o erro novamente \n\n";
+        console.log(error);
     }
 
-    function print() {
-    add();
-    }
-
-    print();
 }
 
-function helloWorld() {
-    console.log "Hello World!"
-  }
+
+
+
   

@@ -86,26 +86,33 @@
             <div class="dualCard">
                 <div class="sub-content-dual-card">
                     <div class="card">
+                        <h2> Error 1</h2>
                         <p>This function will generate a reference error</p>
                         <p id="reference-error1">Try it</p>
                         <button class="at-bottom" onclick="error1()">Error 1</button>
                     </div>
 
                     <div class="card">
+                        <h2> Error 2</h2>
                         <p>This function helps you to understand the stack trace.</p>
                         <p>Try it</p>
+                        <p id="stack-error2">The error will appear here</p>
+                        <div id="stack-console-error2"></div>
                         <button class="at-bottom" onclick="error2()">Error 2</button>
                     </div>
                     
                     <div class="card">
+                        <h2> Error 3</h2>
                         <p>
                             This function will generate a SyntaxError and, as a consequence,
                             a reference error afterward because the function can not exist 
                             with a sintax error.
                         </p>
                         <p>Try it</p>
+                        
                         <button class="at-bottom" onclick="helloWorld()">Error 3</button>
                     </div>
+                    <button onclick="location.reload()">Relload Erros</button>
                 </div>
             </div>
         </div>
