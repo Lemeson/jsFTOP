@@ -18,6 +18,8 @@ nav {
     background-color: #1F6EA3;
     color: #fff;
     font-size: 2em;
+    position: fixed;
+    width: 100%;
 }
 
 nav > ul {
@@ -61,6 +63,7 @@ nav .push-right {
 }
 
 .content {
+    margin-top: 60px;
     display: flex;
     flex-direction: column;
 }

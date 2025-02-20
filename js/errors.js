@@ -42,6 +42,10 @@ function error2(){
 
 }
 
+function helloWorld(){
+        console.log("Hello World!");
+}
+
 
 
 
