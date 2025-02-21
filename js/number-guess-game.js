@@ -38,7 +38,7 @@ function checkGuess() {
   guessField.value = "";
   guessField.focus();
 }
-guessSubmit.addeventListener("click", checkGuess);
+guessSubmit.addEventListener("click", checkGuess);
 
 function setGameOver() {
   guessField.disabled = true;
@@ -46,7 +46,7 @@ function setGameOver() {
   resetButton = document.createElement("button");
   resetButton.textContent = "Start new game";
   document.body.appendChild(resetButton);
-  resetButton.addeventListener("click", resetGame);
+  resetButton.addEventListener("click", resetGame);
 }
 
 function resetGame() {
