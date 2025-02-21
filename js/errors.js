@@ -13,9 +13,7 @@ function error1(){
              `Define a variable called ${variableError}`;
         }
         console.log(error);
-
     }
-
 }
 
 function error2(){
@@ -30,8 +28,8 @@ function error2(){
             function print() {
             add();
             }
-        
             print();
+
     } catch(error){
         document.getElementById("stack-error2").innerText = error;
         document.getElementById("stack-error2").style.color = "#A3201F";
@@ -39,7 +37,6 @@ function error2(){
         o stack abra o console do navegador e gere o erro novamente \n\n";
         console.log(error);
     }
-
 }
 
 function helloWorld(){
