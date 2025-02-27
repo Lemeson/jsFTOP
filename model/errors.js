@@ -52,6 +52,16 @@ class ErrorExample{
     }
 }
 
+
+// Create an instance that can be accessed globally
+const errorExample = new ErrorExample();
+
+// Make functions accessible in HTML
+window.error1 = () => errorExample.error1();
+window.error2 = () => errorExample.error2();
+window.helloWorld = () => errorExample.helloWorld();
+
+
 // function error1(){
 //     const a = "Peace";
 //     const b = "Of ";
