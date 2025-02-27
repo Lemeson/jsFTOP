@@ -19,16 +19,17 @@ class ErrorHandler {
     }
 }
 
-class ErrorExample{
+class ErrorExample extends ErrorHandler{
     constructor() {
-        this.errorHandler = new ErrorHandler()
+        super();
+        //this.errorHandler = new ErrorHandler()
     }
 
     error1(){
         try{
             console.log(c);
         }catch(error){
-            this.errorHandler.handleReferenceError(error, "reference-error1");
+            this.handleReferenceError(error, "reference-error1");
         }
     }
 
@@ -43,7 +44,7 @@ class ErrorExample{
                 }
                 print();
         }catch(error){
-            his.errorHandler,handleStackError(error, "stack-error2");
+            his.handleStackError(error, "stack-error2");
         }
     }
 
