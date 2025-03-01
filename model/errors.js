@@ -1,13 +1,18 @@
 class ErrorHandler {
-    constructor() {}
+    constructor() {};
 
-    handleReferenceError(error, elementId) {
-        if (error instanceof ReferenceError) {
-            const variableError = error.message.split(" ")[0];
-            document.getElementById("reference-error1").innerText =
-             `Define a variable called ${variableError}`;
+    handleReferenceError(elementId) {
+        try{
+            console.log(c);
+        }catch(error){
+            if (error instanceof ReferenceError) {
+                const variableError = error.message.split(" ")[0];
+                document.getElementById("reference-error1").innerText =
+                 `Define a variable called ${variableError}`;
+            }
+            console.log(error);
         }
-        console.log(error);
+
     }
 
     handleStackError(error, elementId) {
@@ -19,18 +24,13 @@ class ErrorHandler {
     }
 }
 
+const errorHandler = new ErrorHandler();
+window.error1 = () => errorHandler.handleReferenceError("reference-error1")
+
 class ErrorExample extends ErrorHandler{
     constructor() {
         super();
         //this.errorHandler = new ErrorHandler()
-    }
-
-    error1(){
-        try{
-            console.log(c);
-        }catch(error){
-            this.handleReferenceError(error, "reference-error1");
-        }
     }
 
     error2(){
@@ -58,7 +58,6 @@ class ErrorExample extends ErrorHandler{
 const errorExample = new ErrorExample();
 
 // Make functions accessible in HTML
-window.error1 = () => errorExample.error1();
 window.error2 = () => errorExample.error2();
 window.helloWorld = () => errorExample.helloWorld();
 
