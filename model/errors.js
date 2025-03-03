@@ -7,7 +7,7 @@ class ErrorHandler {
         }catch(error){
             if (error instanceof ReferenceError) {
                 const variableError = error.message.split(" ")[0];
-                document.getElementById("reference-error1").innerText =
+                document.getElementById(elementId).innerText =
                  `Define a variable called ${variableError}`;
             }
             console.log(error);
@@ -44,7 +44,7 @@ class ErrorExample extends ErrorHandler{
                 }
                 print();
         }catch(error){
-            his.handleStackError(error, "stack-error2");
+            this.handleStackError(error, "stack-error2");
         }
     }
 
