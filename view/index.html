@@ -22,8 +22,8 @@
                     <p>This exercise takes a number from input and add 7 to it.</p>
                     Number: <input type="number" id="numberInput" name="number">
                     
-                    <button type="button" onclick="add7()">Sum 7</button>
-            
+                    <button type="button" onclick="add7('numberInput','result')">Sum 7</button>
+                    
                     <p id="result">Result will appear here</p>
                 </div>
         
@@ -36,7 +36,7 @@
                         <input class="exe2BoxNumbers" type="number" id="exercise2N1"> 
                         <input class="exe2BoxNumbers" type="number" id="exercise2N2">
                     </div>
-                    <button type="button" onclick="multiply()">Multiply</button>
+                    <button type="button" onclick="multiply('exercise2N1','exercise2N2','result2')">Multiply</button>
                     <p id="result2">Result will appear here</p>
                 </div>
             </div>
@@ -48,7 +48,7 @@
                     <br>
                     Enter string:
                     <input type="text" id="capitalize">
-                    <button type="button" onclick="capitalize()">Capitalize</button>
+                    <button type="button" onclick="capitalize('capitalize','result3')">Capitalize</button>
                     <p id="result3">Result will appear here</p>
                 </div>
     
@@ -57,8 +57,8 @@
                     <p>This exercise takes a string and returns the last letter</p>
                     <br>
                     Enter string:
-                    <input type="text" id="lastletter">
-                    <button type="button" onclick="lastletter()">Last letter</button>
+                    <input type="text" id="phrase">
+                    <button type="button" onclick="lastletter('phrase','result4')">Last letter</button>
                     <p id="result4">Result will appear here</p>
                 </div>
             </div>
@@ -105,9 +105,9 @@
         </div>
     </div>
 
-    <script src="js/exercises1.js"></script>
-    <script src="/model/errors.js"></script>
-    <script src="js/js.js"></script>
+    <script src="../model/exercises1.js"></script>
+    <script src="../model/errors.js"></script>
+    <script src="../controller/js/js.js"></script>
 </body>
 
 </html>

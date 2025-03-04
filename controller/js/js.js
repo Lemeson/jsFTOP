@@ -5,4 +5,4 @@ async function loadComponent(url, containerId) {
 }
 
 // Load navbar
-loadComponent('components/navbar.html', 'navbar-container');
+loadComponent('../components/navbar.html', 'navbar-container');

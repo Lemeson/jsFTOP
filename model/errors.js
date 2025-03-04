@@ -1,5 +1,5 @@
 class ErrorHandler {
-    constructor() {};
+    constructor() {}
 
     handleReferenceError(elementId) {
         try{
