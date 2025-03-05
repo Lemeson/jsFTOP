@@ -46,9 +46,9 @@ app.get("/api/users", async (req, res) => {
 
 
 app.listen(3001, () => {
-    console.log("🚀 Server running on https://js-ftop-rho.vercel.app");
+    console.log("🚀 Server running on https://localhost:3001");
  });
-
+ 
 module.exports = app;
 
 // //Start server
