@@ -44,7 +44,7 @@ app.get("/api/users", async (req, res) => {
     }
 });
 
-module.exports = app; //to versel
+module.exports = app;
 
 //Start server
 // app.listen(3000, () => {
