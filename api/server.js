@@ -3,38 +3,39 @@ const cors = require("cors");
 const pool = require("./db");
 const bcrypt = require("bcryptjs");
 
+
 const app = express();
-app.use(cors()); // Allow frontend requests
+app.use(cors()); //allow front end requests
 app.use(express.json()); // Parse JSON body
 
-// Route to insert user data into MariaDB
-app.post("/api/users", async (req, res) => {
-    const { name, email, password } = req.body;
+//Route to insert user data into MariaDB
+app.post("/api/users", async(req, res) => {
+    const {name, email, password} = req.body;
 
-    // Generate a hash of the password before saving
-    const salt = await bcrypt.genSalt(10); // Generate a random "salt"
-    const hashedPassword = await bcrypt.hash(password, salt); // Hash the password
-
+    // Gerar um hash da senha antes de salvar
+    const salt = await bcrypt.genSalt(10); // Gera um "sal" aleatório
+    const hashedPassword = await bcrypt.hash(password, salt); // Criptografa a senha
+            
     let conn;
     try {
         conn = await pool.getConnection();
         await conn.query("INSERT INTO users (name, email, password) VALUES (?, ?, ?)", [name, email, hashedPassword]);
-        res.json({ message: "User inserted successfully!" });
+        res.json({message: "User inserted successfully!"});
     } catch (err) {
         console.error("Error inserting data:", err);
-        res.status(500).json({ error: "Database error" });
+        res.status(500).json({error: "Database error"});
     } finally {
         if (conn) conn.release();
     }
 });
 
-// Route to fetch all users
+//
 app.get("/api/users", async (req, res) => {
     let conn;
     try {
         conn = await pool.getConnection();
         const rows = await conn.query("SELECT * FROM users");
-        res.json(rows); // Return users as JSON
+        res.json(rows); // Retorna os usuários como JSON
     } catch (err) {
         console.error("Error fetching data:", err);
         res.status(500).json({ error: "Database error" });
@@ -43,13 +44,14 @@ app.get("/api/users", async (req, res) => {
     }
 });
 
-// Export the Express app as a serverless function
+
+app.listen(3001, () => {
+    console.log("🚀 Server running on https://js-ftop-rho.vercel.app");
+ });
+
 module.exports = app;
 
+// //Start server
 
-//module.exports = app;
 
-//Start server
-// app.listen(3000, () => {
-//     console.log("🚀 Server running on https://js-ftop-rho.vercel.app");
-// });
+
