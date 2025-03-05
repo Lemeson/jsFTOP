@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "model/database-access/server.js",
   "scripts": {
-    "start": "node model/database-access/server.js"
+    "start": "node api/server.js"
   },
   "dependencies": {
     "bcryptjs": "^3.0.2",
