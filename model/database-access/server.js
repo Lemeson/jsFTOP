@@ -9,7 +9,7 @@ app.use(cors()); //allow front end requests
 app.use(express.json()); // Parse JSON body
 
 //Route to insert user data into MariaDB
-app.post("/users", async(req, res) => {
+app.post("/api/users", async(req, res) => {
     const {name, email, password} = req.body;
 
     // Gerar um hash da senha antes de salvar
@@ -30,7 +30,7 @@ app.post("/users", async(req, res) => {
 });
 
 //
-app.get("/users", async (req, res) => {
+app.get("/api/users", async (req, res) => {
     let conn;
     try {
         conn = await pool.getConnection();
@@ -44,8 +44,9 @@ app.get("/users", async (req, res) => {
     }
 });
 
+module.exports = app; //to versel
 
 //Start server
-app.listen(3000, () => {
-    console.log("🚀 Server running on http://localhost:3000");
-});
+// app.listen(3000, () => {
+//     console.log("🚀 Server running on https://js-ftop-rho.vercel.app");
+// });
