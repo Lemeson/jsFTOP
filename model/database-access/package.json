@@ -1,10 +1,4 @@
 {
-  "name": "my-app",
-  "version": "1.0.0",
-  "main": "model/database-access/server.js",
-  "scripts": {
-    "start": "node model/database-access/server.js"
-  },
   "dependencies": {
     "bcryptjs": "^3.0.2",
     "cors": "^2.8.5",
