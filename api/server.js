@@ -44,7 +44,13 @@ app.get("/api/users", async (req, res) => {
     }
 });
 
-module.exports = app;
+// Export a handler function for Vercel
+module.exports = (req, res) => {
+    app.handle(req, res);  // Alteração aqui
+};
+
+
+//module.exports = app;
 
 //Start server
 // app.listen(3000, () => {
