@@ -1,10 +1,12 @@
 {
-    "version": 2,
-    "builds": [
-      { "src": "model/database-access/server.js", "use": "@vercel/node" }
-    ],
-    "routes": [
-      { "src": "/api/(.*)", "dest": "model/database-access/server.js" }
-    ]
+  "version": 2,
+  "builds": [
+    {
+      "src": "model/database-access/server.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    { "src": "/api/(.*)", "dest": "server.js" }
+  ]
 }
-  
