@@ -6,7 +6,11 @@
       "use": "@vercel/node"
     },
     {
-      "src": "public/**",
+      "src": "view/**",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "model/**",
       "use": "@vercel/static"
     }
   ],
@@ -16,8 +20,12 @@
       "dest": "api/server.js"
     },
     {
+      "src": "/model/(.*)",
+      "dest": "model/$1"
+    },
+    {
       "src": "/(.*)",
-      "dest": "public/$1"
+      "dest": "view/$1"
     }
   ]
 }
